@@ -1,0 +1,94 @@
+@font-face{
+    font-family: Yoselin;
+    src:url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face{
+    font-family: Yoselin;
+    src:url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: 400;
+}
+@font-face{
+    font-family: Yoselin;
+    src:url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+@font-face{
+    font-family: Yoselin;
+    src:url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+*{
+    color: #212121;
+}
+h1{
+    font-size: 60px;
+    margin-top: 64px;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: top right bottom left;
+    margin: top right bottom left;
+}
+header{
+    font-size: 14px;
+    color: #616161;
+    text-decoration: none;
+}
+header a{
+    color: #616161;
+    text-decoration: none;
+}
+header a:hover{
+    color: red;
+}
+h2{
+    font-size: 32px;
+}
+h3{
+    font-size: 24px;
+}
+nav details summary{
+    color: black;
+    font-weight: bold;
+}
+body{
+    /*font-family: Yoselin;*/
+    font-family: 'Roboto', sans-serif;
+}
+pre{
+    background: #FEC62E;
+}
+blockquote{
+    margin: 32px 0;
+}
+.hero{
+    background: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
+    height: 350px;
+}
+h1::after{
+    content: '-';
+}
+h1::before{
+    content: '-';
+}
+.section-content{
+    counter-reset: titleList;
+}
+.section-content h3{
+    counter-increment: titleList;
+}
+.section-content h3::before{
+    content: counter(titleList);
+}
+.section-content h3::after{
+    content: '';
+    width: 32px;
+    height: 4px;
+    background:#212121;
+    display: inline-block;
+}
